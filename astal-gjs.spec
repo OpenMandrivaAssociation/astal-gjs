@@ -25,7 +25,6 @@ BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  gobject-introspection
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
-BuildRequires:  typelib(GTop)
 
 Requires:  pkgconfig(astal-io-0.1)
 Requires:  pkgconfig(astal-3.0)
