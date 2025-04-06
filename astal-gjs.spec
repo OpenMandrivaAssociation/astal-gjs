@@ -16,7 +16,7 @@ Group:      System/Libraries
 BuildRequires:  meson
 BuildRequires:  pkgconfig(astal-io-0.1)
 BuildRequires:  pkgconfig(astal-3.0)
-BuildRequires:  pkgconfig(astal-4.0)
+BuildRequires:  pkgconfig(astal-4-4.0)
 BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(glib-2.0)
