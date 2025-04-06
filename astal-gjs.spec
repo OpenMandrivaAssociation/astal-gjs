@@ -30,7 +30,7 @@ Requires:  pkgconfig(astal-io-0.1)
 Requires:  pkgconfig(astal-3.0)
 Requires:  pkgconfig(astal-4-4.0)
 
-Supplements:    astal
+Supplements:    pkgconfig(astal-3.0)
 
 %package    devel
 Summary:    Development files for %{name}
