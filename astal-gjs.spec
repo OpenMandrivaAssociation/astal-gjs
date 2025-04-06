@@ -8,7 +8,7 @@
 
 Name:       astal-gjs
 Version:    1~%{bumpver}.git%{astal_shortcommit}
-Release:    1
+Release:    2
 Source0:    https://github.com/aylur/astal/archive/%{astal_commit}/%{name}-%{astal_shortcommit}.tar.gz
 Summary:    Building blocks for creating custom desktop shells
 URL:        https://github.com/aylur/astal
@@ -25,6 +25,7 @@ BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  gobject-introspection
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
+BuildRequires:  typelib(GTop)
 
 Requires:  pkgconfig(astal-io-0.1)
 Requires:  pkgconfig(astal-3.0)
