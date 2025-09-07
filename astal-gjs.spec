@@ -1,15 +1,16 @@
 %global debug_package %{nil}
 
-%global astal_commit 69efb4c91e590adcb5a3d8938454f987982e3891
+%global astal_commit 20bd8318e4136fbd3d4eb2d64dbabc3acbc915dd
 %global astal_shortcommit %(c=%{astal_commit}; echo ${c:0:7})
-%global bumpver 1
+%global bumpver 2
+%global pkgname astal
 
 %global _vpath_srcdir lang/gjs
 
 Name:       astal-gjs
 Version:    1~%{bumpver}.git%{astal_shortcommit}
-Release:    2
-Source0:    https://github.com/aylur/astal/archive/%{astal_commit}/%{name}-%{astal_shortcommit}.tar.gz
+Release:    1
+Source0:    https://github.com/aylur/astal/archive/%{astal_commit}/%{pkgname}-%{astal_shortcommit}.tar.gz
 Summary:    Building blocks for creating custom desktop shells
 URL:        https://github.com/aylur/astal
 License:    LGPL-2.1-only
