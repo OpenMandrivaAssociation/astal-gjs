@@ -9,8 +9,9 @@
 
 Name:       astal-gjs
 Version:    1~%{bumpver}.git%{astal_shortcommit}
-Release:    1
+Release:    2
 Source0:    https://github.com/aylur/astal/archive/%{astal_commit}/%{pkgname}-%{astal_shortcommit}.tar.gz
+Source1:    astal-pnpm-offline-cache.tar.gz
 Summary:    Building blocks for creating custom desktop shells
 URL:        https://github.com/aylur/astal
 License:    LGPL-2.1-only
@@ -26,6 +27,7 @@ BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  gobject-introspection
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
+BuildRequires:  pnpm
 
 Requires:  pkgconfig(astal-io-0.1)
 Requires:  pkgconfig(astal-3.0)
@@ -44,8 +46,10 @@ Development files for %{name}
 
 %prep
 %autosetup -n astal-%{astal_commit} -p1
+tar zxf %{S:1}
 
 %build
+pnpm install --offline --force
 %meson
 %meson_build
 
@@ -58,4 +62,4 @@ Development files for %{name}
 
 
 %files devel
-%{_libdir}/pkgconfig/*
+%{_libdir}/pkgconfig/astal-gjs.pc
